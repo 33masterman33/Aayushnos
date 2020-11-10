@@ -1,0 +1,188 @@
+<!--aayushnos-->
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="./styles/style.css">
+	<script type="text/javascript" src="./js/start.js"></script>
+	<script type="text/javascript" src="./js/game.js"></script>
+	<title>Aayushnos</title>
+	<link rel="shortcut icon" href="./assets/png/uno.png" />
+</head>
+<body>
+	<div id="a-welcome_screen">
+		<h1>Welcome to Aayushnos</h1>
+		<form id="a-choices">
+			<span>
+				<h2>Enter Number of Players: </h2> 
+				<input class="box" type="text" name="Players" placeholder="How many players are there?" style="width: 185px;">
+			</span>
+			<span>
+				<h2>Enter Number of Decks: </h2> 
+				<input class="box" type="text" name="Decks" placeholder="How many decks do you want to play with?" style="width: 270px;">
+			</span>
+			<span>
+				<h2>Enter Number of Starting Cards: </h2> 
+				<input class="box" type="text" name="Size" placeholder="How many cards do you want to start with?" style="width: 270px;">
+			</span>
+		</form>
+
+		<h2>Rules</h2>
+		<table>
+			<tr>
+								<th></th>
+								<td>0-7's</td>
+								<td>Infinite Stacking</td>
+								<td>Jump In</td>
+								<td>Infinate Draw</td>
+								<td>Force Play</td>
+								<td>Double Play</td>
+								<td>7</td>
+								<td>8</td>
+								<td>9</td>
+								<td>10</td>
+							</tr>
+							<tr>
+								<th>On</th>
+							    <td>
+							    	<input type="radio" name="1" id="a-active_rad_1" checked>
+									<label for="a-active_rad_1"></label>
+							    </td>
+							    <td>
+							    	<input type="radio" name="2" id="a-active_rad_2" checked>
+							    	<label for="a-active_rad_2"></label>
+							    </td>
+							    <td>
+							    	<input type="radio" name="3" id="a-active_rad_3" checked>
+									<label for="a-active_rad_3"></label>
+							    </td>
+							    <td>
+							    	<input type="radio" name="4" id="a-active_rad_4" checked>
+									<label for="a-active_rad_4"></label>
+							    </td>
+							    <td>
+							    	<input type="radio" name="5" id="a-active_rad_5" checked>
+							    	<label for="a-active_rad_5"></label>
+							    </td>
+							    <td>
+							    	<input type="radio" name="6" id="a-active_rad_6" checked>
+							    	<label for="a-active_rad_6"></label>
+							    </td>
+							    <td>
+							    	<input type="radio" name="7" id="a-active_rad_7" checked>
+							    	<label for="a-active_rad_7"></label>
+							    </td>
+							    <td>
+							    	<input type="radio" name="8" id="a-active_rad_8" checked>
+							    	<label for="a-active_rad_8"></label>
+							    </td>
+							    <td>
+							    	<input type="radio" name="9" id="a-active_rad_9" checked>
+							    	<label for="a-active_rad_9"></label>
+							    </td>
+							    <td>
+							    	<input type="radio" name="10" id="a-active_rad_10" checked>
+							    	<label for="a-active_rad_10"></label>
+							    </td>
+							</tr>
+							<tr>
+							    <th>Off</th>
+							    <td>
+							    	<input type="radio" name="1" id="a-inactive_rad_1">
+									<label for="a-inactive_rad_1"></label>
+							    </td>
+							    <td>
+							    	<input type="radio" name="2" id="a-inactive_rad_2">
+							    	<label for="a-inactive_rad_2"></label>
+							    </td>
+							    <td>
+							    	<input type="radio" name="3" id="a-inactive_rad_3">
+									<label for="a-inactive_rad_3"></label>
+							    </td>
+							    <td>
+							    	<input type="radio" name="4" id="a-inactive_rad_4">
+									<label for="a-inactive_rad_4"></label>
+							    </td>
+							    <td>
+							    	<input type="radio" name="5" id="a-inactive_rad_5">
+							    	<label for="a-inactive_rad_5"></label>
+							    </td>
+							    <td>
+							    	<input type="radio" name="6" id="a-inactive_rad_6">
+							    	<label for="a-inactive_rad_6"></label>
+							    </td>
+							    <td>
+							    	<input type="radio" name="7" id="a-inactive_rad_7">
+							    	<label for="a-inactive_rad_7"></label>
+							    </td>
+							    <td>
+							    	<input type="radio" name="8" id="a-inactive_rad_8">
+							    	<label for="a-inactive_rad_8"></label>
+							    </td>
+							    <td>
+							    	<input type="radio" name="9" id="a-inactive_rad_9">
+							    	<label for="a-inactive_rad_9"></label>
+							    </td>
+							    <td>
+							    	<input type="radio" name="10" id="a-inactive_rad_10">
+							    	<label for="a-inactive_rad_10"></label>
+							    </td>
+							</tr>
+		</table>
+
+		<button class="start_button" onclick=start_screen();>Start Game</button>
+
+		<div class="rules">		
+			<p>
+				<b>Rule Definitions:</b>
+				<br>
+				<b>0-7's:</b> When a 0 is played all hands are rotated in the direction of play. When a 7 is played the player can choose one other player to switch hands with.
+				<br>
+				<br>
+				<b>Infinite Stacking:</b> When a +2 or +4 is played the affected player can add the same type of card on top and the card count will increase to what is played. YOU CAN stack a +4 on a +2 and vise versa.
+				<br>
+				<br>
+				<b>Jump in:</b> If a player has the same color and type of card as the one played they can play the same card out of turn.
+				<br>
+				<br>
+				<b>Infinate draw:</b> If the player draws from the deck (not on a +2 or +4) they must continue to draw until they have a card that can be played.
+				<br>
+				<br>
+				<b>Force play:</b> If the player draws a card from the deck that can be played they must play it.
+			</p>
+		</div>
+
+		<div class="rules">
+		<p>
+			<b>Original Rules:</b>
+			<br>
+			<b>Reverse</b> – If going clockwise, switch to counterclockwise or vice versa. It can only be played on a card that matches by color, or on another Reverse card. If turned up at the beginning of play, the dealer goes first, and the player to the dealer’s right is next (normally it would be the player to the dealer’s left).
+			<br>
+			<b>Skip</b> – When a player places this card, the next player has to skip their turn. It can only be played on a card that matches by color, or on another Skip card. If turned up at the beginning of play, the first player (to the dealer’s left) loses his/her turn. The next player to that player’s right starts the game instead.
+			<br>
+			<b>Draw Two</b> – When a person places this card, the next player will have to pick up two cards and forfeit his/her turn. It can only be played on a card that matches by color, or on another Draw Two. If turned up at the beginning of play, the first player draws two cards and gets skipped.
+			<br>
+			<b>Wild</b> – This card represents all four colors, and can be placed on any card. The player has to state which color it will represent for the next player. It can be played regardless of whether another card is available. If turned up at the beginning of play, the first player chooses what color to continue play.
+			<br>
+			<b>Wild Draw Four</b> – This acts just like the wild card except that the next player also has to draw four cards as well as forfeit his/her turn. With this card, you must have no other alternative cards to play that matches the color of the card previously played. If you play this card illegally, you may be challenged by the other player to show your hand to him/her. If guilty, you need to draw 4 cards. If not, the challenger needs to draw 6 cards instead. If turned up at the beginning of play, return this card to the Draw pile, shuffle, and turn up a new one.
+		</p>
+		</div>
+	</div>
+	<div id=a-playable_screen>
+		
+		<!-- temperary buttons so i dont have to use console commands everytime-->
+		<button class="start_button" onclick=determineCard();>Determine card</button>
+		<button class="start_button" onclick=deckShuffle();>Shuffle deck</button>
+		<button class="start_button" onclick=generatePlayable(0);>Generate Playable</button>
+		<button class="start_button" onclick=drawCard(infiniteDraw,0);>draw card</button>
+		<button class="start_button" onclick='document.getElementById("a-player1").textContent = hands[0];'>print hand</button>
+		<button class="start_button" onclick=console.log(playableHands);>print playable cards</button>
+		<button class="start_button" onclick=console.log(currentCard);> print current card</button>
+
+
+		<span><p>Player 1's Hand:</p> <p id="a-player1"></p> </span>
+
+
+	</div>
+
+</body>
+</html>
