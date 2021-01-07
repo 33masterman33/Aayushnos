@@ -14,7 +14,9 @@ html{
 	color: white;
     background: black;
 }
-
+body{
+	margin: 0 0 0 0; 
+}
 h1 {
 	font-family: TitilliumWeb-Bold;
 	font-size: 40px;
@@ -124,3 +126,6 @@ label:hover {
 	display: none;
 }
 
+#a-playable_screen_test {
+	display: none;
+}

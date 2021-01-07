@@ -6,6 +6,7 @@ var stacking = true;
 function start_screen() {
 	document.getElementById("a-welcome_screen").style.display = 'none';
 	document.getElementById("a-playable_screen").style.display = 'block';
+	startCards();
 	//alert('Welcome to Aayushnos Alpha');
 	numDecks = document.getElementById("a-choices").elements[1].value;
 	numPlayers = document.getElementById("a-choices").elements[0].value;
